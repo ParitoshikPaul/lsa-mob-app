@@ -9,29 +9,35 @@
   <ion-grid>
     <ion-row><ion-col col-12 class="splash-top"><img src="assets/logo.png" class="logo"><img src="assets/spaceline.png" class="spaceline"></ion-col></ion-row>
  <ion-row><ion-col col-12 class="splash-top">
+  <ion-row>
+  <ion-col col-12>
+  <button ion-button class="btn-lsa">USE MY LOCATION</button>
+  </ion-col>
+  </ion-row>
+   <ion-row>
+  <ion-col col-12>
+    <ion-label style="color:#fff !important">OR</ion-label>
+     </ion-col>
+  </ion-row>
  <ion-list>
   <ion-item class="select-box">
     <ion-label style="color:#fff !important">Select your country</ion-label>
-    <ion-select [(ngModel)]="gaming">
-      <ion-option value="nes">NES</ion-option>
-      <ion-option value="n64">Nintendo64</ion-option>
-      <ion-option value="ps">PlayStation</ion-option>
-      <ion-option value="genesis">Sega Genesis</ion-option>
-      <ion-option value="saturn">Sega Saturn</ion-option>
-      <ion-option value="snes">SNES</ion-option>
+    <ion-select [(ngModel)]="countries">
+      <ion-option value="in">India</ion-option>
+      <ion-option value="uae">Uae</ion-option>
+      <ion-option value="us">Usa</ion-option>
+      <ion-option value="aus">Australia</ion-option>
+      <ion-option value="uk">UK</ion-option>
     </ion-select>
   </ion-item>
   </ion-list>
    <ion-list>
   <ion-item class="select-box">
     <ion-label style="color:#fff !important">Select your language</ion-label>
-    <ion-select [(ngModel)]="gaming">
-      <ion-option value="nes">NES</ion-option>
-      <ion-option value="n64">Nintendo64</ion-option>
-      <ion-option value="ps">PlayStation</ion-option>
-      <ion-option value="genesis">Sega Genesis</ion-option>
-      <ion-option value="saturn">Sega Saturn</ion-option>
-      <ion-option value="snes">SNES</ion-option>
+    <ion-select [(ngModel)]="language">
+      <ion-option value="eng">English</ion-option>
+      <ion-option value="ar">Arabic</ion-option>
+      <ion-option value="ch">Chineese</ion-option>
     </ion-select>
   </ion-item>
   </ion-list>
@@ -40,7 +46,8 @@
   <ion-row>
     <ion-col col-12>
   <button ion-button class="btn-lsa">GET STARTED</button>
-   </ion-col>
-  </ion-row>
+
+    </ion-col>
+       </ion-row>
   </ion-grid>
 </ion-content>
