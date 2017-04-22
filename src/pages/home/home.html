@@ -1,0 +1,46 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <ion-grid>
+    <ion-row><ion-col col-12 class="splash-top"><img src="assets/logo.png" class="logo"><img src="assets/spaceline.png" class="spaceline"></ion-col></ion-row>
+    <ion-row><ion-col col-12 class="splash-bottom"><img src="assets/buildingimg.png" class="building"><h6>www.lebenonsmartapp.com</h6></ion-col> </ion-row>
+  </ion-grid>
+</div>
+
+<ion-content padding class="home">
+  <ion-grid>
+    <ion-row><ion-col col-12 class="splash-top"><img src="assets/logo.png" class="logo"><img src="assets/spaceline.png" class="spaceline"></ion-col></ion-row>
+ <ion-row><ion-col col-12 class="splash-top">
+ <ion-list>
+  <ion-item class="select-box">
+    <ion-label style="color:#fff !important">Select your country</ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="nes">NES</ion-option>
+      <ion-option value="n64">Nintendo64</ion-option>
+      <ion-option value="ps">PlayStation</ion-option>
+      <ion-option value="genesis">Sega Genesis</ion-option>
+      <ion-option value="saturn">Sega Saturn</ion-option>
+      <ion-option value="snes">SNES</ion-option>
+    </ion-select>
+  </ion-item>
+  </ion-list>
+   <ion-list>
+  <ion-item class="select-box">
+    <ion-label style="color:#fff !important">Select your language</ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="nes">NES</ion-option>
+      <ion-option value="n64">Nintendo64</ion-option>
+      <ion-option value="ps">PlayStation</ion-option>
+      <ion-option value="genesis">Sega Genesis</ion-option>
+      <ion-option value="saturn">Sega Saturn</ion-option>
+      <ion-option value="snes">SNES</ion-option>
+    </ion-select>
+  </ion-item>
+  </ion-list>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+  <button ion-button class="btn-lsa">GET STARTED</button>
+   </ion-col>
+  </ion-row>
+  </ion-grid>
+</ion-content>

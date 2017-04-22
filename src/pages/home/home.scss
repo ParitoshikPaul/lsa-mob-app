@@ -1,0 +1,65 @@
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #388ECB;
+  text-align: center;
+}
+.splash-top {
+    margin-top: 10vh;
+    position: relative;
+    animation: pulse 1s linear forwards;
+}
+.spaceline{
+    position: absolute;
+    left: 0;
+    bottom: 2vh;
+}
+img.logo {
+    width: 35%;
+    animation: animation 3100ms linear infinite both;
+    animation-delay: 1s;
+}
+.splash-bottom {
+    margin-top: 10vh;
+    color: #ffffff;
+}
+img.building {
+    width: 60%;
+}
+.home{
+  background-color: #388ECB;
+}
+.home .spaceline {
+    bottom: 1.9vh;
+}
+.home .splash-top{
+    text-align: center;
+}
+.select-icon{
+    color: #fff;
+}
+.select-box{
+    background: #3C94CE;
+    color: #fff !important;
+    border: 0px !important;
+}
+.btn-lsa{
+    width: 100%;
+    border: 0px !important;
+    border-radius: 0px !important;
+    transition: none;
+    background-color: #286595 !important;
+}
+@keyframes pulse {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
