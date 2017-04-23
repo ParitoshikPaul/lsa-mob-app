@@ -55,6 +55,12 @@ img.building {
     transition: none;
     background-color: #286595 !important;
 }
+.select-icon .select-icon-inner {
+    color: #fff !important;
+}
+.select-wp{
+    border: 0px !important;
+}
 @keyframes pulse {
   0% {
     opacity:0;

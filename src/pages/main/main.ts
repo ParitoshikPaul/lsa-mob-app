@@ -3,10 +3,11 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-about',
-  templateUrl: 'about.html'
+  templateUrl: 'main.html'
 })
-export class AboutPage {
+export class MainPage {
 
+  tabBarElement: any;
   constructor(public navCtrl: NavController) {
 
   }
