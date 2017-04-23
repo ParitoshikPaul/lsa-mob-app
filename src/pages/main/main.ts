@@ -6,10 +6,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'main.html'
 })
 export class MainPage {
-
   tabBarElement: any;
   constructor(public navCtrl: NavController) {
-
+    this.tabBarElement = document.querySelector('.tabbar');
   }
-
+  ionViewDidLoad() {
+    this.tabBarElement.style.display = 'inline-flex';
+  }
 }
