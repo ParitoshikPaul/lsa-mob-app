@@ -11,17 +11,17 @@
  <ion-row><ion-col col-12 class="splash-top">
   <ion-row>
   <ion-col col-12>
-  <button ion-button class="btn-lsa">  <ion-icon ios="ios-at-outline" md="md-at"></ion-icon>&nbsp;&nbsp;USE MY LOCATION</button>
+  <button ion-button class="btn-lsa"> <img src="assets/icon/location-btn.png" class="locicon"> USE MY LOCATION</button>
   </ion-col>
   </ion-row>
    <ion-row>
   <ion-col col-12>
-    <ion-label style="color:#fff !important">OR</ion-label>
+    <h4 class="ortxt">or</h4>
      </ion-col>
   </ion-row>
- <ion-list>
+ <ion-list class="margtb">
   <ion-item class="select-box">
-    <ion-label style="color:#fff !important"><ion-icon ios="ios-planet-outline" md="md-planet"></ion-icon>&nbsp;&nbsp;Select your country</ion-label>
+    <ion-label style="color:#fff !important"><img src="assets/icon/country-icon.png" class="locicon"> Select your country</ion-label>
     <ion-select [(ngModel)]="countries">
       <ion-option value="in">India</ion-option>
       <ion-option value="uae">Uae</ion-option>
@@ -31,9 +31,9 @@
     </ion-select>
   </ion-item>
   </ion-list>
-   <ion-list>
+   <ion-list  class="margtb">
   <ion-item class="select-box">
-    <ion-label style="color:#fff !important"><ion-icon ios="ios-text-outline" md="md-text"></ion-icon>&nbsp;&nbsp;Select your language</ion-label>
+    <ion-label style="color:#fff !important"><img src="assets/icon/langage-icon.png" class="locicon"> Select your language</ion-label>
     <ion-select [(ngModel)]="language">
       <ion-option value="eng">English</ion-option>
       <ion-option value="ar">Arabic</ion-option>
