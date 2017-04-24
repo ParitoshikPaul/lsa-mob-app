@@ -20,9 +20,8 @@ export class MainPage {
     this.tabBarElement.style.display = 'inline-flex';
       this.categoryservice.load().subscribe(data=>{
         this.categories = data;
+        console.log(data);
       });
   }
   
-  get_categories(){
-  }
 }

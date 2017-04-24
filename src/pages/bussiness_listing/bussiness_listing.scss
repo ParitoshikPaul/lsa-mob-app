@@ -1,11 +1,50 @@
-.toolbar-background {
-    border-color: #1c5e7d;
-    background: #1c5e7d;
+.pagecntmain {background-color: #388ECB;}
+.headdr{background-color:#22557a; padding-top: 20px;}
+.navlctn, .menuicn img{ width: 20px;}
+ .navlctn{  
+      width: 100% !important;
+    margin: 5px 0px 0px 0px;
+ }
+.menuicn img{ margin: 7px 0 0;}
+.mylctiontext {
+  color: #fff;
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: center;
 }
-.toolbar-title{
-    color: #fff;
+.paddcustom{padding:8px;}
+.listmain{ background: #fff; margin: 7px 0px; cursor: pointer;}
+.listmain:hover{opacity: 0.9;}
+.nppimg{ padding: 0px;}
+.nppimg.col > img {
+  margin: 0 0 -3px;
 }
-page-contact .menuicn {
-    text-align: right;
-    float: right;
+.listmain h2{font-size: 1.3rem;color: #333; font-weight: 300; margin: 0;}
+.listmain p{font-size: 1rem;color: #333; margin: 0;}
+.ratealike {
+  display: table;
+  margin: 4px 0;
+}
+.ratealike ul {
+  display: inline;
+  list-style: none;
+  margin: 4px 0;
+  padding: 0;
+}
+.ratealike ul li {
+  float: left;
+  font-size: 12px;
+  margin-right: 1px;
+}
+.ratealike ul li img, .ratealike span img {
+  height: 12px;
+  margin: 2px 0;
+}
+.ratealike > span {
+  float: left;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+}
+.ratealike span img {
+  margin: 0 0 -2px;
 }

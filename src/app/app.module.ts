@@ -4,20 +4,21 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { MainPage } from '../pages/main/main';
-import { BussinessListPage } from '../pages/bussiness_listing/bussiness_listing';
+import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { BussinessListPage } from '../pages/bussiness_listing/bussiness_listing';
 import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
-import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
     MyApp,
     MainPage,
-    BussinessListPage,
+    ContactPage,
     HomePage,
+    BussinessListPage,
     TabsPage
   ],
   imports: [
@@ -29,14 +30,14 @@ import { Geolocation } from '@ionic-native/geolocation';
   entryComponents: [
     MyApp,
     MainPage, 
-    BussinessListPage,
+    ContactPage,
     HomePage,
+    BussinessListPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
