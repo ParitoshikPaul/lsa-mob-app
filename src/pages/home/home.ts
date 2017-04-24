@@ -8,7 +8,7 @@ import { MainPage } from '../main/main';
 export class HomePage {
   tabBarElement: any;
   splash = true;
-  rootPage: any = MainPage;
+  rootPage: any = HomePage;
   constructor(public navCtrl: NavController) {
     this.tabBarElement = document.querySelector('.tabbar');
      this.tabBarElement.style.display = 'none !important';

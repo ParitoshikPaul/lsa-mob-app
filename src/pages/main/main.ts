@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {CategoryService} from '../../providers/category-service';
 import { Observable } from "rxjs/Observable";
+import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
 @Component({
   selector: 'page-about',
   templateUrl: 'main.html',
@@ -22,6 +23,9 @@ export class MainPage {
         this.categories = data;
         console.log(data);
       });
+  }
+  bussiness_list(event){ 
+    this.navCtrl.push(BussinessListPage);
   }
   
 }

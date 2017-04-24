@@ -24,7 +24,7 @@
 <ion-grid padding class="icncolmain">
   <ion-row>
    <ion-col col-4 *ngFor="let category of categories">
-     <a href="#">
+     <a (click)="bussiness_list(event);">
        <img src="assets/icon/icon1.png" class="caticn">
        <h3>{{category.name}}</h3>
      </a>

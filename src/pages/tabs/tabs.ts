@@ -10,7 +10,7 @@ import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
 })
 export class TabsPage {
 
-  tab1Root = BussinessListPage;
+  tab1Root = HomePage;
   tab2Root = MainPage;
   tab3Root = ContactPage;
 
