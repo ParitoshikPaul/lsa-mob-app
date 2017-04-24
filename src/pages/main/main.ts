@@ -1,15 +1,31 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import {CategoryService} from '../../providers/category-service';
+import { Observable } from "rxjs/Observable";
+import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
 @Component({
   selector: 'page-about',
-  templateUrl: 'main.html'
+  templateUrl: 'main.html',
+  providers: [CategoryService]
 })
 export class MainPage {
-
+  public data: any;
+  public categories: any;
   tabBarElement: any;
-  constructor(public navCtrl: NavController) {
-
+  category: Observable<any>;
+  constructor(public navCtrl: NavController, public categoryservice: CategoryService) {
+    this.tabBarElement = document.querySelector('.tabbar');  
+    
+}
+  ionViewDidLoad() {
+    this.tabBarElement.style.display = 'inline-flex';
+      this.categoryservice.load().subscribe(data=>{
+        this.categories = data;
+        console.log(data);
+      });
   }
-
+  bussiness_list(event){ 
+    this.navCtrl.push(BussinessListPage);
+  }
+  
 }

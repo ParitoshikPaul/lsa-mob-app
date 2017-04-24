@@ -1,0 +1,77 @@
+.pagecntmain {background-color: #388ECB;}
+.headdr{background-color:#22557a;}
+.navlctn, .menuicn img{ width: 25px;}
+.menuicn img{ margin: 7px 0 0;}
+.mylctiontext {
+  color: #fff;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.slider img{ width: 100%;}
+.bdetails{ text-align: center;}
+.bdetails > h2 {
+  color: #333;
+  font-size: 18px;
+  text-align: left;
+}
+.bdetails > h1 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 300;
+}
+.bdetails > h1 b {
+  color: #388ECB;
+}
+.bdetails p {
+  color: #999;
+  font-size: 12px;
+  font-weight: 300;
+}
+.bdetails > h3 {color: #388ECB;  font-size: 15px;}
+.bdetails > h4 { color: #388ecb; font-size: 17px;}
+.bdetails > h4 b{  color: #333;}
+.ratealike {
+  display: table;
+  margin: 4px auto;
+}
+.ratealike ul {
+  display: inline;
+  list-style: none;
+  margin: 4px 0;
+  padding: 0;
+}
+.ratealike ul li {
+  float: left;
+  font-size: 12px;
+  margin-right: 1px;
+}
+.ratealike ul li img, .ratealike span img {
+  height: 12px;
+  margin: 2px 0;
+}
+.ratealike > h5 {
+  float: left;
+  font-size: 12px;
+  margin: 0 0 0 7px;
+}
+.ratealike > h5 b{ color: #388ECB;}
+
+.ratealike > span {
+  float: left;
+  font-size: 12px;
+  margin: 0 0 0 7px;
+}
+.ratealike span img {
+  margin: 0 0 -2px;
+}
+.icnwtxtblk {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+.icnwtxtblk .col a img {
+  display: table;
+  height: 25px;
+  margin: 2px auto 6px;
+}
+.icnwtxtblk .col a{color: #388ECB; text-decoration: none; font-weight: 500;}

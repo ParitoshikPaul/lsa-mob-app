@@ -1,11 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+<ion-header class="headpsn">
+  <div class="bgbanner">
+   <img src="assets/bgimg1.jpg" class="bgimgpsn">
+  <ion-grid class="overlay">
+     <ion-row class="bannav">
+        <ion-col col-10><img src="assets/icon/location-btn.png" class="navlctn-loc"><h2>Mumbai</h2></ion-col>
+        <ion-col col-2><a href="#" class="menuicn"><img src="assets/icon/menu-icon.png"></a></ion-col>
+     </ion-row>
+    
+  </ion-grid>
+     <ion-segment [(ngModel)]="tabcat" color="primary">
+      <ion-segment-button value="popular">
+        Categories
+      </ion-segment-button>
+      <ion-segment-button value="new">
+        What's New
+      </ion-segment-button>
+      <ion-segment-button value="offers">
+        Offers
+      </ion-segment-button>
+    </ion-segment>
+   </div>
 </ion-header>
-
-<ion-content padding>
-
-</ion-content>
+<ion-grid padding class="icncolmain">
+  <ion-row>
+   <ion-col col-4 *ngFor="let category of categories">
+     <a (click)="bussiness_list(event);">
+       <img src="assets/icon/icon1.png" class="caticn">
+       <h3>{{category.name}}</h3>
+     </a>
+   </ion-col>
+ </ion-row>
+</ion-grid>
