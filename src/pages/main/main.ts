@@ -9,23 +9,29 @@ import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
   providers: [CategoryService]
 })
 export class MainPage {
+  menu = false;
+  tabcat = "";
   public data: any;
   public categories: any;
   tabBarElement: any;
-  category: Observable<any>;
   constructor(public navCtrl: NavController, public categoryservice: CategoryService) {
-    this.tabBarElement = document.querySelector('.tabbar');  
-    
-}
+    this.tabcat = "categories";
+  this.tabBarElement = document.querySelector('.tabbar');  
+    this.categoryservice.load().subscribe(data=>{
+    this.categories = data;
+  });
+  }
   ionViewDidLoad() {
-    this.tabBarElement.style.display = 'inline-flex';
-      this.categoryservice.load().subscribe(data=>{
-        this.categories = data;
-        console.log(data);
-      });
+  this.tabBarElement.style.display = 'inline-flex';
   }
   bussiness_list(event){ 
     this.navCtrl.push(BussinessListPage);
   }
-  
+  menu_overlay(event){ 
+    this.menu = true;
+  }
+  menu_overlay_close(event){ 
+    this.menu = false;
+  }
+
 }

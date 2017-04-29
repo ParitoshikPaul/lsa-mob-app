@@ -1,15 +1,25 @@
+<div id="menu-overlay" [style.display]="menu ? 'flex': 'none'">
+  <ion-grid>
+    <a href="#" (click)='menu_overlay_close(event)'>Close</a>
+    <ion-row><ion-col col-12 class="splash-top"><img src="assets/logo.png" class="logo"><img src="assets/spaceline.png" class="spaceline"></ion-col></ion-row>
+    <ion-row><ion-col col-12 class="splash-bottom"><img src="assets/buildingimg.png" class="building"><h6>www.lebenonsmartapp.com</h6></ion-col> </ion-row>
+  </ion-grid>
+</div>
 <ion-header class="headpsn">
   <div class="bgbanner">
    <img src="assets/bgimg1.jpg" class="bgimgpsn">
-  <ion-grid class="overlay">
-     <ion-row class="bannav">
-        <ion-col col-10><img src="assets/icon/location-btn.png" class="navlctn-loc"><h2>Mumbai</h2></ion-col>
-        <ion-col col-2><a href="#" class="menuicn"><img src="assets/icon/menu-icon.png"></a></ion-col>
-     </ion-row>
-    
+    <ion-grid class="overlay">
+    <ion-row class="bannav">
+      <ion-col col-10>
+    <ion-searchbar [showCancelButton]="shouldShowCancel"></ion-searchbar>
+    </ion-col>
+<a href="#" class="menuicn"(click)="menu_overlay(event);"><img src="assets/icon/menu-icon.png"></a>
+    </ion-row>
   </ion-grid>
-     <ion-segment [(ngModel)]="tabcat" color="primary">
-      <ion-segment-button value="popular">
+  </div>   
+</ion-header>
+<ion-segment [(ngModel)]="tabcat" color="primary" class="tabcat">
+      <ion-segment-button value="categories">
         Categories
       </ion-segment-button>
       <ion-segment-button value="new">
@@ -19,15 +29,34 @@
         Offers
       </ion-segment-button>
     </ion-segment>
-   </div>
-</ion-header>
 <ion-grid padding class="icncolmain">
-  <ion-row>
+<div [ngSwitch]="tabcat">
+  <ion-row *ngSwitchCase="'categories'" ng-selected="selected"> 
    <ion-col col-4 *ngFor="let category of categories">
      <a (click)="bussiness_list(event);">
-       <img src="assets/icon/icon1.png" class="caticn">
+       <img src="{{category.category_icon}}" class="caticn">
        <h3>{{category.name}}</h3>
      </a>
-   </ion-col>
+   </ion-col> 
  </ion-row>
+ 
+  <ion-row *ngSwitchCase="'new'">
+   <ion-col col-4 *ngFor="let category of categories">
+     <a (click)="bussiness_list(event);">
+       <img src="{{category.category_icon}}" class="caticn">
+       <h3>New</h3>
+     </a>
+   </ion-col> 
+
+ </ion-row>
+ <ion-row *ngSwitchCase="'offers'">
+   <ion-col col-4 *ngFor="let category of categories">
+     <a (click)="bussiness_list(event);">
+       <img src="{{category.category_icon}}" class="caticn">
+       <h3>OFFERS</h3>
+     </a>
+   </ion-col> 
+
+ </ion-row>
+</div>
 </ion-grid>

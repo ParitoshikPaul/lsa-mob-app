@@ -2,14 +2,17 @@ page-about{ background-color: #388ECB;}
 .headpsn{ position: relative !important;}
 .bgbanner{ position: relative;}
 .bgimgpsn{ width:100%;}
-.overlay{ position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0,0,0,0.7);}
+.overlay{ padding: 0; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0,0,0,0.7);}
+.header-ios .bannav .searchbar-search-icon{ top:19px;}
 .bannav{
-  background: rgba(255,255,255,0.3);
-     margin-top: 20px;
- ion-col{ padding: 2px;}
+  background: #112A3C;
+  ion-searchbar{background:none; padding: 0px;}
+  .searchbar-input{border-radius: 0; height: 45px;}
+  .searchbar-md .searchbar-search-icon{ top:15px;}
+ ion-col{ padding: 0px;}
 .menuicn img{
     width: 20px;
-    margin: 12px 15px;
+    margin: 14px 15px;
     cursor: pointer;
     float: right;
     }
@@ -47,4 +50,24 @@ page-about{ background-color: #388ECB;}
 .icncolmain .col a:hover { opacity: 0.7;}
 h3{
   margin-top:5px;
+}
+.segment-md-primary .segment-button {
+  color: #fff;
+}
+.tabcat {  background: #112a3c; }
+.tabcat.segment-ios .segment-button {
+  border: none !important;
+   border-radius: 0px !important;
+  color: #fff !important;
+}
+#menu-overlay{
+    position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #388ECB;
+  text-align: center;
 }

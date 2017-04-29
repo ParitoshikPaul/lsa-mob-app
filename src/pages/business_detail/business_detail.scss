@@ -1,5 +1,5 @@
 .pagecntmain {background-color: #388ECB;}
-.headdr{background-color:#22557a;}
+.headdr{background-color:#112a3c;}
 .navlctn, .menuicn img{ width: 25px;}
 .menuicn img{ margin: 7px 0 0;}
 .mylctiontext {
@@ -12,11 +12,10 @@
 .bdetails > h2 {
   color: #333;
   font-size: 18px;
-  text-align: left;
 }
 .bdetails > h1 {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
 }
 .bdetails > h1 b {
@@ -27,12 +26,12 @@
   font-size: 12px;
   font-weight: 300;
 }
-.bdetails > h3 {color: #388ECB;  font-size: 15px;}
-.bdetails > h4 { color: #388ecb; font-size: 17px;}
+.bdetails > h3 {color: #388ECB;  font-size: 14px;}
+.bdetails > h4 { color: #388ecb; font-size: 15px;}
 .bdetails > h4 b{  color: #333;}
 .ratealike {
   display: table;
-  margin: 4px auto;
+  margin: 4px auto  !important;
 }
 .ratealike ul {
   display: inline;
@@ -67,11 +66,11 @@
 .icnwtxtblk {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .icnwtxtblk .col a img {
   display: table;
-  height: 25px;
+  height: 20px;
   margin: 2px auto 6px;
 }
 .icnwtxtblk .col a{color: #388ECB; text-decoration: none; font-weight: 500;}
