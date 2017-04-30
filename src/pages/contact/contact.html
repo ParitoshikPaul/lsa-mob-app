@@ -28,25 +28,10 @@
 
 <ion-content>
   <ion-list class="ntfmain">
-    <ion-item>
+    <ion-item *ngFor="let notification of notificationss">
       <ion-icon name="ionic" item-left></ion-icon>
-      Notification description 1
+      {{notification.title}}
     </ion-item>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      Notification description 2
-    </ion-item>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      Notification description 3
-    </ion-item>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      Notification description 4
-    </ion-item>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      Notification description 5
-    </ion-item>
+
   </ion-list>
 </ion-content>
