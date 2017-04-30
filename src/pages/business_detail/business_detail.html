@@ -1,3 +1,15 @@
+<div id="menu-overlay" [style.display]="menu ? 'flex': 'none'">    
+  <ion-list class="menumain">
+    <a class="clsicn" href="#" (click)='menu_overlay_close(event)'><img src="assets/icon/close-icon.png"></a>
+  <ion-item>Home</ion-item>
+  <ion-item>About</ion-item>
+  <ion-item>Services</ion-item>
+  <ion-item>Business</ion-item>
+  <ion-item>Product</ion-item>
+  <ion-item>Events</ion-item>
+  <ion-item>Contact</ion-item>
+</ion-list>
+</div>
 <ion-header class="headdr">
   <ion-grid>
       <ion-row>
@@ -8,7 +20,7 @@
     Bussiness Detail
    </ion-col>
    <ion-col col-2 style="text-align: right;">
-<a href="#" class="menuicn"><img src="assets/icon/menu-icon.png"></a>
+<a href="#" class="menuicn" (click)="menu_overlay(event);"><img src="assets/icon/menu-icon.png"></a>
    </ion-col>
  </ion-row>
   </ion-grid>
@@ -18,7 +30,20 @@
   <div class="slider">
  <img src="assets/slide1.jpg">
 </div>
-<div class="bdetails" padding>
+<ion-segment [(ngModel)]="tabdet" color="primary" class="tabcat">
+      <ion-segment-button value="details">
+        Details
+      </ion-segment-button>
+      <ion-segment-button value="products">
+        Product
+      </ion-segment-button>
+      <ion-segment-button value="events">
+        Events
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="tabdet">
+  <ion-row *ngSwitchCase="'details'" ng-selected="details"> 
+   <div class="bdetails" padding>
 <h2>Business title name here</h2>
 <div class="ratealike">
           <ul>
@@ -55,7 +80,7 @@
                 </a>
               </ion-col>
               <ion-col col-4>
-                <a href="#">
+                <a href="#" (click)="feedback_page(event);">
                   <img src="assets/icon/message.png">
                   Message
                 </a>
@@ -63,5 +88,14 @@
             </ion-row>
            </ion-grid>
            <h1>Price    <b>$ 1000 - $2000</b></h1>
+</div>
+ </ion-row>
+ 
+  <ion-row *ngSwitchCase="'products'">
+product
+ </ion-row>
+ <ion-row *ngSwitchCase="'events'">
+event
+ </ion-row>
 </div>
 </ion-content>

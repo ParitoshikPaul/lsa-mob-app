@@ -8,7 +8,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { BussinessListPage } from '../pages/bussiness_listing/bussiness_listing';
 import { BusinessdetailPage } from '../pages/business_detail/business_detail';
+import { FeedbackPage } from '../pages/feedback/feedback';
 import { TabsPage } from '../pages/tabs/tabs';
+import { NavigationMenu } from '../pages/menu/menu';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
@@ -22,7 +24,9 @@ import { CommonModule } from '@angular/common';
     HomePage,
     BussinessListPage,
     BusinessdetailPage,
-    TabsPage 
+    FeedbackPage,
+    NavigationMenu,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { CommonModule } from '@angular/common';
     HomePage,
     BussinessListPage,
     BusinessdetailPage,
+    FeedbackPage,
+    NavigationMenu,
     TabsPage
   ],
   providers: [
