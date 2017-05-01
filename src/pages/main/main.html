@@ -3,9 +3,9 @@
     <a class="clsicn" href="#" (click)='menu_overlay_close(event)'><img src="assets/icon/close-icon.png"></a>
   <ion-item>Home</ion-item>
   <ion-item>About</ion-item>
-  <ion-item>Services</ion-item>
-  <ion-item>Business</ion-item>
-  <ion-item>Product</ion-item>
+  <ion-item>Language</ion-item>
+  <ion-item>Team</ion-item>
+  <ion-item>Products</ion-item>
   <ion-item>Events</ion-item>
   <ion-item>Contact</ion-item>
 </ion-list>
@@ -38,7 +38,7 @@
 <div [ngSwitch]="tabcat">
   <ion-row *ngSwitchCase="'categories'" ng-selected="selected"> 
    <ion-col col-4 *ngFor="let category of categories">
-     <a (click)="bussiness_list(event);">
+     <a (click)="bussiness_list(event, tid = category.tid);">
        <img src="{{category.category_icon}}" class="caticn">
        <h3>{{category.name}}</h3>
      </a>
@@ -47,7 +47,7 @@
  
   <ion-row *ngSwitchCase="'new'">
    <ion-col col-4 *ngFor="let category of categories">
-     <a (click)="bussiness_list(event);">
+     <a (click)="bussiness_list(event, category.id);">
        <img src="{{category.category_icon}}" class="caticn">
        <h3>New</h3>
      </a>

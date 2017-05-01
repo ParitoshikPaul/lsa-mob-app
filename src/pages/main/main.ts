@@ -24,8 +24,8 @@ export class MainPage {
   ionViewDidLoad() {
   this.tabBarElement.style.display = 'inline-flex';
   }
-  bussiness_list(event){ 
-    this.navCtrl.push(BussinessListPage);
+  bussiness_list(event, tid){ 
+    this.navCtrl.push(BussinessListPage, { buss_tid: tid });
   }
   menu_overlay(event){ 
     this.menu = true;

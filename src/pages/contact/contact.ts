@@ -21,4 +21,7 @@ this.notification.load().subscribe(data=> { this.notificationss = data });
   menu_overlay_close(event){ 
     this.menu = false;
   }
+    go_back(){
+     this.navCtrl.pop();
+   }
 }
