@@ -9,7 +9,7 @@
   <ion-grid>
     <ion-row><ion-col col-12 class="splash-top"><img src="assets/logo.png" class="logo"><img src="assets/spaceline.png" class="spaceline"></ion-col></ion-row>
  <ion-row><ion-col col-12 class="splash-top">
-  <ion-row>
+  <!--<ion-row>
   <ion-col col-12>
   <button ion-button class="btn-lsa" (click)="usemyloc(event);"> <img src="assets/icon/location-btn.png"  class="locicon"> USE MY LOCATION</button>
   </ion-col>
@@ -18,12 +18,12 @@
   <ion-col col-12>
     <h4 class="ortxt">or</h4>
      </ion-col>
-  </ion-row>
-  <form name="userorign">
+  </ion-row>-->
+  <form [formGroup]="getstartedform" name="userorign">
  <ion-list class="margtb">
   <ion-item class="select-box">
     <ion-label style="color:#fff !important"><img src="assets/icon/country-icon.png" class="locicon"> Select your country</ion-label>
-    <ion-select>
+    <ion-select [formControl]="getstartedform.controls['country']">
       <ion-option *ngFor="let country of countries" value="{{country.name}}">{{country.name}}</ion-option>
     </ion-select>
   </ion-item>
@@ -31,7 +31,7 @@
    <ion-list  class="margtb">
   <ion-item class="select-box">
     <ion-label style="color:#fff !important"><img src="assets/icon/langage-icon.png" class="locicon"> Select your language</ion-label>
-    <ion-select>
+    <ion-select [formControl]="getstartedform.controls['language']">
       <ion-option *ngFor="let language of languages" value="{{language.value}}">{{language.name}}</ion-option>
     </ion-select>
   </ion-item>
@@ -41,7 +41,7 @@
   </ion-row>
   <ion-row>
     <ion-col col-12>
-  <button ion-button class="btn-lsa" (click)="get_started(event);">GET STARTED</button>
+  <button ion-button class="btn-lsa" (click)="get_started(event);" [disabled]="!getstartedform.valid">GET STARTED</button>
 
   </ion-col>
   </ion-row>
