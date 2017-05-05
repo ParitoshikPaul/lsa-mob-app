@@ -27,14 +27,16 @@
 </ion-header>
 
 <ion-content class="feedbacmain" padding>
-    <form>      
-
+    <form [formGroup]="feedback" (submit)="post_feedback($event)">      
+      <label>Rate us</label>
+      <rating [formControl]="feedback.controls['rating']" ng-model="rating.rate" (ngModelChange)="ratings($event)"></rating>
       <label>Full Name</label>
-      <input type="text" name="name" class="inputtxtfl">  
+      <input type="text" name="name" class="inputtxtfl" [formControl]="feedback.controls['name']">  
       <label>Email</label>
-      <input type="email" name="email" class="inputtxtfl">  
+      <input type="email" name="email" class="inputtxtfl" [formControl]="feedback.controls['email']">  
+      
       <label>Your message here...</label>
-      <textarea name="feed" class="inputtxtfl"></textarea>
+      <textarea name="feed" class="inputtxtfl" [formControl]="feedback.controls['message']"></textarea>
       <input type="submit" id="submit" value="Send Feedback" class="btn-lsa">
     </form>
 </ion-content>
