@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { Rating } from '../../component/rating/rating';
 
 @Component({
   selector: 'page-feedback',
