@@ -43,7 +43,7 @@
     <div [ngSwitch]="tabdet">
   <ion-row *ngSwitchCase="'detail'" ngSelected="detail"> 
    <div class="bdetails" padding>
-<h2>Business title name here</h2>
+<h2>{{businessdetail.title}}</h2>
 <div class="ratealike rtcntr">
           <ul>
             <li><img src="assets/icon/star-blue.png"></li>
@@ -56,18 +56,13 @@
           <h5><b>124</b> Ratings</h5>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>  
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem 
-          aperiam, eaque ipsa quaeSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
-          laudantium, totam rem aperiam, eaque ipsa quae</p>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeSed ut perspiciatis unde omnis iste 
-           natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
-           <h3>Business Address here lorem ipsum dummy text</h3>
-           <h4>Open Time :  <b>07:00 Am</b>  -  <b>08:30 Pm</b></h4>
+        <p>{{businessdetail.body.und[0].value}}</p>
+           <h3>{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
+           <h4>Open Time :  <b>{{businessdetail.field_business_hours.und[0].value}}</b></h4>
            <ion-grid class="icnwtxtblk">
              <ion-row>
               <ion-col col-4>
-                <a href="#">
+                <a href="tel:{{businessdetail.field_business_phone.und[0].value}}">
                   <img src="assets/icon/phone-icon.png">
                   Call
                 </a>
@@ -190,92 +185,30 @@
  
   <ion-row *ngSwitchCase="'product'">
      <ion-grid padding>
-   <ion-row>
+   <ion-row  *ngFor="let business of productlist">   
       <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
+        <img src="{{business.image}}">
+        <h2>{{business.title}}</h2>
+        <p>{{business.description}}</p>
+        <h3 class="priclr"></h3>
       </ion-col>
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
-      </ion-col>
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
-      </ion-col>
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
-      </ion-col>
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
-      </ion-col>
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="assets/listimg.jpg">
-        <h2>Product title name</h2>
-        <p>Sed ut unde omnis iste natus error</p>
-        <h3 class="priclr">$400</h3>
-      </ion-col>
+    
     </ion-row>
      </ion-grid>
  </ion-row>
  <ion-row *ngSwitchCase="'event'">
    <ion-grid padding>
-   <ion-row class="listmain events">
+
+   <ion-row class="listmain events"  *ngFor="let business of eventlist">
       <ion-col col-3 class="nppimg">
-        <img src="assets/listimg.jpg">
+        <img src="{{business.image}}">
       </ion-col>
       <ion-col col-9 class="paddcustom">
-        <h2>Event title name here.....</h2>
-        <p>Dehli, India</p>
-        <p>Sed ut unde omnis iste natus error</p>
-        <p>5 attending</p>
+        <h2>{{business.title}}</h2>
+        <p>{{business.description}}</p>
       </ion-col>
     </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-3 class="nppimg">
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-9 class="paddcustom">
-        <h2>Event title name here.....</h2>
-        <p>Dehli, India</p>
-        <p>Sed ut unde omnis iste natus error</p>
-        <p>5 attending</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-3 class="nppimg">
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-9 class="paddcustom">
-        <h2>Event title name here.....</h2>
-        <p>Dehli, India</p>
-        <p>Sed ut unde omnis iste natus error</p>
-        <p>5 attending</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-3 class="nppimg">
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-9 class="paddcustom">
-        <h2>Event title name here.....</h2>
-        <p>Dehli, India</p>
-        <p>Sed ut unde omnis iste natus error</p>
-        <p>5 attending</p>
-      </ion-col>
-    </ion-row>
+   
     </ion-grid>
  </ion-row>
 </div>

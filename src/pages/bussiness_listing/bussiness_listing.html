@@ -30,7 +30,7 @@
   <ion-grid>
     <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let business of businesslist">
       <ion-col col-4 class="nppimg">
-        <img src="assets/listimg.jpg">
+        <img src="{{business.image}}">
       </ion-col>
       <ion-col col-8 class="paddcustom">
         <h2>{{business.title}}</h2>
@@ -45,7 +45,7 @@
           </ul>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
+        <p>{{business.description}}</p>
       </ion-col>
     </ion-row>
    

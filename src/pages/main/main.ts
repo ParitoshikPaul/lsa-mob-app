@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {CategoryService} from '../../providers/category-service';
 import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
-import {FormBuilder, Validators } from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
 @Component({
   selector: 'page-about',
   templateUrl: 'main.html',
