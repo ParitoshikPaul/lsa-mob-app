@@ -24,7 +24,7 @@ export class BusinessdetailPage {
 
   constructor(public navCtrl: NavController, public params: NavParams, public business: BusinessLists,) {
 
-    this.tabdet = "details";
+    //this.tabdet = "detail";
 
     this.business_nid = this.params.get('buss_nid');
     this.business.load_detail(this.business_nid).subscribe(data=> {

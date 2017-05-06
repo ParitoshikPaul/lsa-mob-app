@@ -30,18 +30,18 @@
  <img src="assets/slide1.jpg">
 </div>
 <ion-segment [(ngModel)]="tabdet" color="primary" class="tabcat">
-      <ion-segment-button value="detail">
-        Details
+      <ion-segment-button value="overview">
+        Overview
       </ion-segment-button>
-      <ion-segment-button value="product">
-        Product
+      <ion-segment-button value="specification">
+        Specification
       </ion-segment-button>
-      <ion-segment-button value="event">
-        Events
+      <ion-segment-button value="comments">
+        Comments
       </ion-segment-button>
     </ion-segment>
     <div [ngSwitch]="tabdet">
-  <ion-row *ngSwitchCase="'detail'" ng-selected="selected"> 
+  <ion-row *ngSwitchCase="'overview'" ng-selected="selected"> 
    <div class="bdetails" padding>
 <h2>{{businessdetail.title}}</h2>
 <div class="ratealike rtcntr">
@@ -56,7 +56,7 @@
           <h5><b>{{businessdetail.comment_count}}</b> Ratings</h5>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>  
-        <p>{{businessdetail.body.und[0].value}}</p>
+       
            <h3>{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
            <h4>Open Time :  <b>{{businessdetail.field_business_hours.und[0].value}}</b></h4>
            <ion-grid class="icnwtxtblk">
@@ -80,12 +80,57 @@
                 </a>
               </ion-col>
             </ion-row>
+             
            </ion-grid>
-           
+           <ion-grid class="icnwtxtblk">
+             <ion-row>
+              <ion-col col-3>
+                <a href="{{businessdetail.field_facebook_link.und[0].value}}">
+                  <ion-icon name="logo-facebook"></ion-icon>      
+                </a>
+              </ion-col>
+              <ion-col col-3>
+                <a href="{{businessdetail.field_twitter_link.und[0].value}}">
+                  <ion-icon name="logo-twitter"></ion-icon> 
+                </a>
+              </ion-col>
+              <ion-col col-3>
+                <a href="{{businessdetail.field_linkedin_link.und[0].value}}">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </ion-col>
+               <ion-col col-3>
+                <a href="{{businessdetail.field_instagram_link.und[0].value}}">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                </ion-col>
+                <ion-col col-3>
+                <a href="{{businessdetail.field_googleplus_link.und[0].value}}">
+                  <ion-icon name="logo-googleplus"></ion-icon>
+                </a>
+              </ion-col>
+                <ion-col col-3>
+                <a href="{{businessdetail.field_youtube_link.und[0].value}} ">
+                 <ion-icon name="logo-youtube"></ion-icon>
+                </a>          
+              </ion-col>
+            </ion-row>
+             
+           </ion-grid>
 </div>
-<ion-grid padding class="pddtp">
-<h4 class="ctmfebk">Customer Feedback</h4>
 
+ </ion-row>
+ 
+  <ion-row *ngSwitchCase="'specification'">
+     <ion-grid padding>
+   <ion-row >   
+    <h2>About {{businessdetail.title}}</h2>
+    <p>{{businessdetail.body.und[0].value}}</p>
+    </ion-row>
+     </ion-grid>
+ </ion-row>
+ <ion-row *ngSwitchCase="'comments'">
+   <ion-grid padding class="pddtp">
 <ion-row class="listmain events" *ngFor="let business of commentlist">
       <ion-col col-4>
         <img src="assets/listimg.jpg">
@@ -106,35 +151,6 @@
       </ion-col>
     </ion-row>
   
-   
-    </ion-grid>
- </ion-row>
- 
-  <ion-row *ngSwitchCase="'product'">
-     <ion-grid padding>
-   <ion-row (click)='product_detail(event, business.nid);' *ngFor="let business of productlist">   
-      <ion-col col-4 class="listmain prdcttpt">
-        <img src="{{business.image}}">
-        <h2>{{business.title}}</h2>
-        <p>{{business.description}}</p>
-        <h3 class="priclr">{{business.price}}</h3>
-      </ion-col>
-    
-    </ion-row>
-     </ion-grid>
- </ion-row>
- <ion-row *ngSwitchCase="'event'">
-   <ion-grid padding>
-
-   <ion-row class="listmain events"  *ngFor="let business of eventlist">
-      <ion-col col-3 class="nppimg">
-        <img src="{{business.image}}">
-      </ion-col>
-      <ion-col col-9 class="paddcustom">
-        <h2>{{business.title}}</h2>
-        <p>{{business.description}}</p>
-      </ion-col>
-    </ion-row>
    
     </ion-grid>
  </ion-row>
