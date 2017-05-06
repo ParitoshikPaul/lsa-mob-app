@@ -11,5 +11,12 @@ export class CategoryService {
   return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/lst_bsns_cat')
       .map(res => res.json());
  }
-  
+   load_product_cat() {
+  return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/product_cat')
+      .map(res => res.json());
+ }
+  load_event_cat() {
+  return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/event_cat')
+      .map(res => res.json());
+ }
 }

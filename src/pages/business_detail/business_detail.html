@@ -57,11 +57,11 @@
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>  
        
-           <h3>{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
-           <h4>Open Time :  <b>{{businessdetail.field_business_hours.und[0].value}}</b></h4>
+           <h3 *ngIf="businessdetail.field_address.und[0] !== undefined">{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
+           <h4 *ngIf="businessdetail.field_business_hours !== undefined" >Open Time :  <b>{{businessdetail.field_business_hours.und[0].value}}</b></h4>
            <ion-grid class="icnwtxtblk">
              <ion-row>
-              <ion-col col-4>
+              <ion-col col-4  *ngIf="businessdetail.field_business_phone !== undefined">
                 <a href="tel:{{businessdetail.field_business_phone.und[0].value}}">
                   <img src="assets/icon/phone-icon.png">
                   Call
@@ -84,32 +84,32 @@
            </ion-grid>
            <ion-grid class="icnwtxtblk">
              <ion-row>
-              <ion-col col-3>
+              <ion-col col-3 *ngIf="businessdetail.field_facebook_link !== undefined" >
                 <a href="{{businessdetail.field_facebook_link.und[0].value}}">
                   <ion-icon name="logo-facebook"></ion-icon>      
                 </a>
               </ion-col>
-              <ion-col col-3>
+              <ion-col col-3 *ngIf="businessdetail.field_twitter_link !== undefined">
                 <a href="{{businessdetail.field_twitter_link.und[0].value}}">
                   <ion-icon name="logo-twitter"></ion-icon> 
                 </a>
               </ion-col>
-              <ion-col col-3>
+              <ion-col col-3 *ngIf="businessdetail.field_linkedin_link !== undefined">
                 <a href="{{businessdetail.field_linkedin_link.und[0].value}}">
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
               </ion-col>
-               <ion-col col-3>
+               <ion-col col-3 *ngIf="businessdetail.field_instagram_link !== undefined">
                 <a href="{{businessdetail.field_instagram_link.und[0].value}}">
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
                 </ion-col>
-                <ion-col col-3>
+                <ion-col col-3  *ngIf="businessdetail.field_googleplus_link !== undefined">
                 <a href="{{businessdetail.field_googleplus_link.und[0].value}}">
                   <ion-icon name="logo-googleplus"></ion-icon>
                 </a>
               </ion-col>
-                <ion-col col-3>
+                <ion-col col-3  *ngIf="businessdetail.field_youtube_link !== undefined">
                 <a href="{{businessdetail.field_youtube_link.und[0].value}} ">
                  <ion-icon name="logo-youtube"></ion-icon>
                 </a>          
@@ -125,7 +125,7 @@
      <ion-grid padding>
    <ion-row >   
     <h2>About {{businessdetail.title}}</h2>
-    <p>{{businessdetail.body.und[0].value}}</p>
+    <p  *ngIf="businessdetail.body.und[0].value !== undefined">{{businessdetail.body.und[0].value}}</p>
     </ion-row>
      </ion-grid>
  </ion-row>

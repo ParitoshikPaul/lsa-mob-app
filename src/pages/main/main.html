@@ -25,13 +25,13 @@
 </ion-header>
 <ion-segment [(ngModel)]="tabcat" color="primary" class="tabcat">
       <ion-segment-button value="categories">
-        Categories
+        Bussiness
       </ion-segment-button>
       <ion-segment-button value="new">
-        What's New
+        Products
       </ion-segment-button>
       <ion-segment-button value="offers">
-        Offers
+        Events
       </ion-segment-button>
     </ion-segment>
 <ion-grid padding class="icncolmain">
@@ -46,19 +46,19 @@
  </ion-row>
  
   <ion-row *ngSwitchCase="'new'">
-   <ion-col col-4 *ngFor="let category of categories">
-     <a (click)="bussiness_list(event, category.id);">
-       <img src="{{category.category_icon}}" class="caticn">
-       <h3>New</h3>
+   <ion-col col-4 *ngFor="let category_prod of categories_prod">
+     <a (click)="bussiness_list(event, category_prod.tid);">
+       <img src="{{category_prod.category_icon}}" class="caticn">
+       <h3>{{category_prod.name}}</h3>
      </a>
    </ion-col> 
 
  </ion-row>
  <ion-row *ngSwitchCase="'offers'">
-   <ion-col col-4 *ngFor="let category of categories">
-     <a (click)="bussiness_list(event);">
-       <img src="{{category.category_icon}}" class="caticn">
-       <h3>OFFERS</h3>
+   <ion-col col-4 *ngFor="let category_event of categories_event">
+     <a (click)="bussiness_list(event, category_event.tid);">
+       <img src="{{category_event.category_icon}}" class="caticn">
+       <h3>{{category_event.name}}</h3>
      </a>
    </ion-col> 
 
