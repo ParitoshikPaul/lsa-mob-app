@@ -28,12 +28,12 @@
 
 <ion-content padding class="pagecntmain">
   <ion-grid>
-    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let business of businesslist">
+    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let business of businesslist; let i = index">
       <ion-col col-4 class="nppimg">
         <img src="{{business.image}}">
       </ion-col>
       <ion-col col-8 class="paddcustom">
-        <h2>{{business.title}}</h2>
+        <h2>{{i+1}}{{business.title}}</h2>
         <div class="ratealike">
           <ul>
             <li><img src="assets/icon/star-blue.png"></li>

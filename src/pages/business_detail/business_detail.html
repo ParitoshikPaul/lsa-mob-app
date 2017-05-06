@@ -19,7 +19,7 @@
     Bussiness Detail
    </ion-col>
    <ion-col col-2 style="text-align: right;">
-<a href="#" class="menuicn"><img src="assets/icon/menu-icon.png"></a>
+<a href="#" class="menuicn" (click)="menu_overlay(event);"><img src="assets/icon/menu-icon.png"></a>
    </ion-col>
  </ion-row>
   </ion-grid>
@@ -53,7 +53,7 @@
                 <li><img src="assets/icon/star-gray.png"></li>
                 <li>(4.2)<li>
           </ul>
-          <h5><b>124</b> Ratings</h5>
+          <h5><b>{{businessdetail.comment_count}}</b> Ratings</h5>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>  
         <p>{{businessdetail.body.und[0].value}}</p>
@@ -76,7 +76,7 @@
               <ion-col col-4>
                 <a href="#" (click)="feedback_page(event);">
                   <img src="assets/icon/message.png">
-                  Message
+                  Rate us !
                 </a>
               </ion-col>
             </ion-row>
@@ -85,112 +85,39 @@
 </div>
 <ion-grid padding class="pddtp">
 <h4 class="ctmfebk">Customer Feedback</h4>
-<ion-row class="listmain events">
+
+<ion-row class="listmain events" *ngFor="let business of commentlist">
       <ion-col col-4>
         <img src="assets/listimg.jpg">
       </ion-col>
       <ion-col col-8>
-        <h2>Business title name here.....</h2>
+        <h2>{{business.name}}</h2>
         <div class="ratealike">
-          <ul>
+          <ul >
             <li><img src="assets/icon/star-blue.png"></li>
              <li><img src="assets/icon/star-blue.png"></li>
               <li><img src="assets/icon/star-blue.png"></li>
                <li><img src="assets/icon/star-blue.png"></li>
                 <li><img src="assets/icon/star-gray.png"></li>
-                <li>(4.2)<li>
+                <li>({{business.rating}})<li>
           </ul>
         </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
+        <p>{{business.feedback}}</p>
       </ion-col>
     </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-4>
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-8>
-        <h2>Business title name here.....</h2>
-        <div class="ratealike">
-          <ul>
-            <li><img src="assets/icon/star-blue.png"></li>
-             <li><img src="assets/icon/star-blue.png"></li>
-              <li><img src="assets/icon/star-blue.png"></li>
-               <li><img src="assets/icon/star-blue.png"></li>
-                <li><img src="assets/icon/star-gray.png"></li>
-                <li>(4.2)<li>
-          </ul>
-        </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-4>
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-8>
-        <h2>Business title name here.....</h2>
-        <div class="ratealike">
-          <ul>
-            <li><img src="assets/icon/star-blue.png"></li>
-             <li><img src="assets/icon/star-blue.png"></li>
-              <li><img src="assets/icon/star-blue.png"></li>
-               <li><img src="assets/icon/star-blue.png"></li>
-                <li><img src="assets/icon/star-gray.png"></li>
-                <li>(4.2)<li>
-          </ul>
-        </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-4>
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-8>
-        <h2>Business title name here.....</h2>
-        <div class="ratealike">
-          <ul>
-            <li><img src="assets/icon/star-blue.png"></li>
-             <li><img src="assets/icon/star-blue.png"></li>
-              <li><img src="assets/icon/star-blue.png"></li>
-               <li><img src="assets/icon/star-blue.png"></li>
-                <li><img src="assets/icon/star-gray.png"></li>
-                <li>(4.2)<li>
-          </ul>
-        </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
-      </ion-col>
-    </ion-row>
-    <ion-row class="listmain events">
-      <ion-col col-4>
-        <img src="assets/listimg.jpg">
-      </ion-col>
-      <ion-col col-8>
-        <h2>Business title name here.....</h2>
-        <div class="ratealike">
-          <ul>
-            <li><img src="assets/icon/star-blue.png"></li>
-             <li><img src="assets/icon/star-blue.png"></li>
-              <li><img src="assets/icon/star-blue.png"></li>
-               <li><img src="assets/icon/star-blue.png"></li>
-                <li><img src="assets/icon/star-gray.png"></li>
-                <li>(4.2)<li>
-          </ul>
-        </div>
-        <p>Sed ut unde omnis iste natus error sit ipsa quae end here.</p>
-      </ion-col>
-    </ion-row>
+  
+   
     </ion-grid>
  </ion-row>
  
   <ion-row *ngSwitchCase="'product'">
      <ion-grid padding>
-   <ion-row  *ngFor="let business of productlist">   
+   <ion-row (click)='product_detail(event, business.nid);' *ngFor="let business of productlist">   
       <ion-col col-4 class="listmain prdcttpt">
         <img src="{{business.image}}">
         <h2>{{business.title}}</h2>
         <p>{{business.description}}</p>
-        <h3 class="priclr"></h3>
+        <h3 class="priclr">{{business.price}}</h3>
       </ion-col>
     
     </ion-row>

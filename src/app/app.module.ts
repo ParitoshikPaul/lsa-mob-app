@@ -7,6 +7,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { BussinessListPage } from '../pages/bussiness_listing/bussiness_listing';
 import { BusinessdetailPage } from '../pages/business_detail/business_detail';
+import { ProductdetailPage } from '../pages/product_detail/product_detail';
 import { FeedbackPage } from '../pages/feedback/feedback';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NavigationMenu } from '../pages/menu/menu';
@@ -24,6 +25,7 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     HomePage,
     BussinessListPage,
     BusinessdetailPage,
+    ProductdetailPage,
     FeedbackPage,
     NavigationMenu,
     TabsPage
@@ -33,6 +35,7 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     HttpModule,
     IonicModule.forRoot(MyApp),
     CommonModule,
+    IonicModule.forRoot(MyApp),
     Ionic2RatingModule // Put ionic2-rating module here
   ],
   bootstrap: [IonicApp],
@@ -43,6 +46,7 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     HomePage,
     BussinessListPage,
     BusinessdetailPage,
+    ProductdetailPage,
     FeedbackPage,
     NavigationMenu,
     TabsPage

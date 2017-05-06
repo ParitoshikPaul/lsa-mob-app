@@ -28,4 +28,9 @@ export class BusinessLists {
       .map(res => res.json());
       
 }
+      load_comment(nid) {
+  return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/feedback/'+nid)
+      .map(res => res.json());
+      
+}
 }

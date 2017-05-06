@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FeedbackPage } from '../feedback/feedback';
 import { BusinessLists } from '../../providers/business-listings';
+import { ProductdetailPage } from '../product_detail/product_detail';
 
 @Component({
   selector: 'page-bussiness-detail',
@@ -18,6 +19,8 @@ export class BusinessdetailPage {
       public eventlist:any;
       public event_nid: any;
       public business_nid: any;
+      public commentlist:any;
+    
 
   constructor(public navCtrl: NavController, public params: NavParams, public business: BusinessLists,) {
 
@@ -34,7 +37,9 @@ export class BusinessdetailPage {
 
     this.event_nid = this.params.get('buss_nid');
     this.business.load_event(this.event_nid).subscribe(data=> { this.eventlist = data });
-
+    
+    this.business_nid = this.params.get('buss_nid');
+    this.business.load_comment(this.business_nid).subscribe(data=> { this.commentlist = data });
      }
 
     feedback_page(event){ 
@@ -53,4 +58,7 @@ export class BusinessdetailPage {
     this.navCtrl.pop();
   }
   
+  product_detail(event, nid){ 
+    this.navCtrl.push(ProductdetailPage, { buss_nid: nid });
+  }
   }
