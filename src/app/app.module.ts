@@ -35,7 +35,6 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     HttpModule,
     IonicModule.forRoot(MyApp),
     CommonModule,
-    IonicModule.forRoot(MyApp),
     Ionic2RatingModule // Put ionic2-rating module here
   ],
   bootstrap: [IonicApp],
