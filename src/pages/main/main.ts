@@ -29,7 +29,8 @@ export class MainPage {
       this.categoryservice.load_product_cat().subscribe(data2=>{
     this.categories_prod = data2;
    // console.log(data2);
-  });
+});
+
       this.categoryservice.load_event_cat().subscribe(data3=>{
     this.categories_event = data3; 
   });

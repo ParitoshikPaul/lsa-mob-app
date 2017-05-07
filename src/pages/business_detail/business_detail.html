@@ -30,13 +30,12 @@
           <h5><b>{{businessdetail.comment_count}}</b> Ratings</h5>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>  
-       
-           <h3>{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
+        <h3>{{businessdetail.field_address.und[0].thoroughfare}}, {{businessdetail.field_address.und[0].premise}},{{businessdetail.field_address.und[0].country}},{{businessdetail.field_address.und[0].postal_code}}</h3>
            <h4  >Open Time :  <b>{{businessdetail.field_business_hours.und[0].value}}</b></h4>
            <ion-grid class="icnwtxtblk">
              <ion-row>
               <ion-col col-4 >
-                <a href="tel:{{businessdetail.field_business_phone.und[0].value}}">
+         <a href="tel:{{businessdetail.field_business_phone.und[0].value}}">
                   <img src="assets/icon/phone-icon.png">
                   Call
                 </a>
@@ -58,17 +57,17 @@
            </ion-grid>
            <ion-grid class="icnwtxtblk">
              <ion-row>
-              <ion-col col-3 >
-                <a href="{{businessdetail.field_facebook_link.und[0].value}}">
+          <ion-col col-3 >
+               <a href="{{businessdetail.field_facebook_link.und[0].value}}">
                   <ion-icon name="logo-facebook"></ion-icon>      
                 </a>
               </ion-col>
-              <ion-col col-3 >
-                <a href="{{businessdetail.field_twitter_link.und[0].value}}">
+             <ion-col col-3 >
+              <a href="{{businessdetail.field_twitter_link.und[0].value}}">
                   <ion-icon name="logo-twitter"></ion-icon> 
                 </a>
               </ion-col>
-              <ion-col col-3>
+              <ion-col col-3 >
                 <a href="{{businessdetail.field_linkedin_link.und[0].value}}">
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
@@ -83,7 +82,7 @@
                   <ion-icon name="logo-googleplus"></ion-icon>
                 </a>
               </ion-col>
-                <ion-col col-3>
+                <ion-col col-3 >
                 <a href="{{businessdetail.field_youtube_link.und[0].value}} ">
                  <ion-icon name="logo-youtube"></ion-icon>
                 </a>          

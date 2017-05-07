@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { App, NavController, NavParams } from 'ionic-angular';
 import { FeedbackPage } from '../feedback/feedback';
 import { BusinessLists } from '../../providers/business-listings';
-
 @Component({
   selector: 'page-bussiness-detail',
   templateUrl: 'business_detail.html',
   providers: [BusinessLists]  
 })
 export class BusinessdetailPage {
+
+      menu = false;
       tabdet = "";
       public businessdetail: any;
       public productlist:any;
@@ -27,7 +28,7 @@ export class BusinessdetailPage {
     this.business.load_detail(this.business_nid).subscribe(data=> {
     this.businessdetail = data 
   //  console.log(data);
-    });
+  });
   
     this.product_nid = this.params.get('buss_nid');
     this.business.load_product(this.product_nid).subscribe(data=> { this.productlist = data });
@@ -42,11 +43,16 @@ export class BusinessdetailPage {
     feedback_page(event){ 
       this.navCtrl.push(FeedbackPage);
     }
+  menu_overlay(event){ 
+      this.menu = true;
+    }
 
-    product_detail(event, nid){ 
-      this.navCtrl.push(BusinessdetailPage, { buss_nid: nid });
+    menu_overlay_close(event){ 
+      this.menu = false;
     }
-    ionViewDidEnter() {
-        this._app.setTitle(this.title + " - App Name");
-    }
+
+    go_back(){
+    this.navCtrl.pop();
   }
+  
+ }
