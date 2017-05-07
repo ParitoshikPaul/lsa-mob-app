@@ -1,37 +1,25 @@
-<div id="menu-overlay" [style.display]="menu ? 'flex': 'none'">    
-  <ion-list class="menumain">
-    <a class="clsicn" href="#" (click)='menu_overlay_close(event)'><img src="assets/icon/close-icon.png"></a>
-  <ion-item>Home</ion-item>
-  <ion-item>About</ion-item>
-  <ion-item>Language</ion-item>
-  <ion-item>Team</ion-item>
-  <ion-item>Products</ion-item>
-  <ion-item>Events</ion-item>
-  <ion-item>Contact</ion-item>
-</ion-list>
-</div>
-<ion-header class="headdr">
-  <ion-grid>
-      <ion-row>
-   <ion-col col-2 (click)="go_back();">
-     <img src="assets/icon/back-icon.png" class="navlctn">
-   </ion-col>
-   <ion-col col-8 class="mylctiontext">
-    Notifications
-   </ion-col>
-   <ion-col col-2 style="text-align: right;">
-<a href="#" class="menuicn" (click)="menu_overlay(event);"><img src="assets/icon/menu-icon.png"></a>
-   </ion-col>
- </ion-row>
-  </ion-grid>
-</ion-header>
-
+<header-section></header-section>
 <ion-content>
-  <ion-list class="ntfmain">
-    <ion-item *ngFor="let notification of notificationss">
-      <ion-icon name="ionic" item-left></ion-icon>
-      {{notification.title}}
-    </ion-item>
-
-  </ion-list>
+  <div class="bgbanner">
+   <img src="assets/bgimg1.jpg" class="bgimgpsn">
+   </div>
+   <div class="bdetails contactpage" padding>
+          <h2>Contact Info</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>      
+           <h4>Phone :  <b>+91 123 4567 89</b></h4>
+           <h4>Fax :  <b>0 123 4567 89</b></h4>
+           <h4>E-Mail:  <b>youremail@gmail.com</b></h4>            
+           <div class="icnwtxtblk">
+             <h4> Dubai Office</h4>
+             <h6>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h6>
+           </div>
+           <div class="icnwtxtblk">
+              <h4> India Office</h4>
+             <h6>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h6>
+           </div>
+           <div class="icnwtxtblk">
+              <h4>Abu Dhabi Office</h4>
+             <h6>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h6 >
+           </div>
+</div>
 </ion-content>

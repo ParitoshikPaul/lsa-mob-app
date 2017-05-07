@@ -13,6 +13,10 @@ export class MainPage {
   tabcat = "";
   public data: any;
   public categories: any;
+  
+  public categories_prod: any;
+  
+  public categories_event: any;
   tabBarElement: any;
   getstartedform: any;
   constructor(public navCtrl: NavController, public categoryservice: CategoryService, public _form: FormBuilder) {
@@ -20,6 +24,14 @@ export class MainPage {
   this.tabBarElement = document.querySelector('.tabbar');  
     this.categoryservice.load().subscribe(data=>{
     this.categories = data;
+  //   console.log(data);
+  });
+      this.categoryservice.load_product_cat().subscribe(data2=>{
+    this.categories_prod = data2;
+   // console.log(data2);
+  });
+      this.categoryservice.load_event_cat().subscribe(data3=>{
+    this.categories_event = data3; 
   });
 
   }

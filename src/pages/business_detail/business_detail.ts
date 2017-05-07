@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { App, NavController, NavParams } from 'ionic-angular';
 import { FeedbackPage } from '../feedback/feedback';
 import { BusinessLists } from '../../providers/business-listings';
-import { ProductdetailPage } from '../product_detail/product_detail';
 
 @Component({
   selector: 'page-bussiness-detail',
@@ -10,8 +9,6 @@ import { ProductdetailPage } from '../product_detail/product_detail';
   providers: [BusinessLists]  
 })
 export class BusinessdetailPage {
-
-      menu = false;
       tabdet = "";
       public businessdetail: any;
       public productlist:any;
@@ -20,16 +17,16 @@ export class BusinessdetailPage {
       public event_nid: any;
       public business_nid: any;
       public commentlist:any;
-    
+      public title: any;
 
-  constructor(public navCtrl: NavController, public params: NavParams, public business: BusinessLists,) {
-
-    //this.tabdet = "detail";
-
-    this.business_nid = this.params.get('buss_nid');
+  constructor(private _app: App, public navCtrl: NavController, public params: NavParams, public business: BusinessLists,) {
+ 
+    this.tabdet = "details";
+    this.title = "Business Details";
+        this.business_nid = this.params.get('buss_nid');
     this.business.load_detail(this.business_nid).subscribe(data=> {
     this.businessdetail = data 
-    console.log(data);
+  //  console.log(data);
     });
   
     this.product_nid = this.params.get('buss_nid');
@@ -46,19 +43,10 @@ export class BusinessdetailPage {
       this.navCtrl.push(FeedbackPage);
     }
 
-    menu_overlay(event){ 
-      this.menu = true;
+    product_detail(event, nid){ 
+      this.navCtrl.push(BusinessdetailPage, { buss_nid: nid });
     }
-
-    menu_overlay_close(event){ 
-      this.menu = false;
+    ionViewDidEnter() {
+        this._app.setTitle(this.title + " - App Name");
     }
-
-    go_back(){
-    this.navCtrl.pop();
-  }
-  
-  product_detail(event, nid){ 
-    this.navCtrl.push(ProductdetailPage, { buss_nid: nid });
-  }
   }

@@ -1,14 +1,11 @@
 .pagecntmain {background-color: #388ECB;}
-.headdr{background-color:#112a3c;}
-.navlctn, .menuicn img{ width: 25px;}
- .navlctn{  
-    margin: 5px 0px 0px 0px;
-    width: 10px;
- }
-.menuicn img{ margin: 7px 0 0;}
-.ntfmain .item {
-  border-bottom: 1px solid #ddd;
-  color: #388ecb;
+.contactpage{ text-align: left !important;}
+.contactpage p {
   font-size: 13px;
+  margin: 5px 0;
 }
-.ntfmain .item .item-inner {  border-bottom: none; margin-left: 10px !important;}
+.contactpage h4{margin: 5px 0px;}
+.contactpage .icnwtxtblk{ padding-top: 20px;}
+.icnwtxtblk h4 {
+      color: rgb(56, 142, 203);
+}

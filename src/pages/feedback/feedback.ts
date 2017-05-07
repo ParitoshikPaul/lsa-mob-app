@@ -22,16 +22,7 @@ export class FeedbackPage {
   });
 
   }
- 
-  menu_overlay(event){ 
-    this.menu = true;
-  }
-  menu_overlay_close(event){ 
-    this.menu = false;
-  }
-    go_back(){
-     this.navCtrl.pop();
-   }
+
   ratings($event){
     console.log($event);
   }
