@@ -24,7 +24,7 @@
 </ion-header>
 <ion-content padding class="pagecntmain">
   <ion-grid class="listmain-grid">
-    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let item of items;">
+    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let item of businesslist;">
       <ion-col col-4 class="nppimg">
         <img src="{{item.image}}">
       </ion-col>

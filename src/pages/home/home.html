@@ -21,8 +21,8 @@
   </ion-row>-->
   <form [formGroup]="getstartedform" name="userorign">
  <ion-list class="margtb">
-  <ion-item class="select-box">
-    <ion-label style="color:#fff !important"><img src="assets/icon/country-icon.png" class="locicon"> Select your country</ion-label>
+  <ion-item class="select-box"><img src="assets/icon/country-icon.png" class="locicon">
+    <ion-label style="color:#fff !important" translate>home.selectcont</ion-label>
     <ion-select [formControl]="getstartedform.controls['country']">
       <ion-option *ngFor="let country of countries" value="{{country.name}}">{{country.name}}</ion-option>
     </ion-select>
@@ -31,7 +31,7 @@
    <ion-list  class="margtb">
   <ion-item class="select-box">
     <ion-label style="color:#fff !important"><img src="assets/icon/langage-icon.png" class="locicon"> Select your language</ion-label>
-    <ion-select [formControl]="getstartedform.controls['language']">
+    <ion-select [formControl]="getstartedform.controls['language']" [(ngModel)]="language" (ngModelChange)="changeLocale(language)">
       <ion-option *ngFor="let language of languages" value="{{language.value}}">{{language.name}}</ion-option>
     </ion-select>
   </ion-item>

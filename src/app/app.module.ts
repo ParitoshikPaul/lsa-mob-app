@@ -19,6 +19,10 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { Ionic2RatingModule } from 'ionic2-rating';
 
+//Below 2 components are related with localization implementation
+import { LocaleModule, LocalizationModule } from 'angular2localization';
+import { LocalizeComponent } from '../components/localize/localize';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,14 +36,17 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     NotificationPage,
     header,
     SearchHeader,
-    TabsPage
+    TabsPage,
+    LocalizeComponent 
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
     CommonModule,
-    Ionic2RatingModule 
+    Ionic2RatingModule ,
+    LocaleModule.forRoot(), // New instance of LocaleService.
+    LocalizationModule.forRoot() // New instance of LocalizationService.
   ],
   bootstrap: [IonicApp],
   entryComponents: [
