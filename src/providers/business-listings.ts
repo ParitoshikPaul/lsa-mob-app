@@ -33,4 +33,9 @@ export class BusinessLists {
       .map(res => res.json());
       
 }
+      search_nodes() {
+  return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/lsa_search')
+      .map(res => res.json());
+      
+}
 }

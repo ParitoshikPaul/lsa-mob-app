@@ -1,0 +1,25 @@
+<div id="menu-overlay" [style.display]="menu ? 'flex': 'none'">    
+  <ion-list class="menumain">
+    <a class="clsicn" href="#" (click)='menu_overlay_close(event)'><img src="assets/icon/close-icon.png"></a>
+  <ion-item>Home</ion-item>
+  <ion-item>About</ion-item>
+  <ion-item>Language</ion-item>
+  <ion-item>Team</ion-item>
+  <ion-item>Products</ion-item>
+  <ion-item>Events</ion-item>
+  <ion-item>Contact</ion-item>
+</ion-list>
+</div>
+<ion-header class="headpsn">
+  <div class="bgbanner">
+   <img src="assets/bgimg1.jpg" class="bgimgpsn">
+    <ion-grid class="overlay">
+    <ion-row class="bannav">
+      <ion-col col-10>
+    <ion-searchbar focuser [showCancelButton]="shouldShowCancel" (click)="searchpage($event);"></ion-searchbar>
+    </ion-col>
+    <a href="#" class="menuicn" (click)="menu_overlay(event);"><img src="assets/icon/menu-icon.png"></a>
+    </ion-row>
+  </ion-grid>
+  </div>   
+</ion-header>

@@ -10,7 +10,9 @@ import { FeedbackPage } from '../pages/feedback/feedback';
 import { NotificationPage } from '../pages/notification/notification';
 import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SearchPage } from '../pages/search/search';
 import { header } from '../components/header/header';
+import { SearchHeader } from '../components/search_header/search_header';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
@@ -26,8 +28,10 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     BusinessdetailPage, 
     FeedbackPage,
     ContactPage,
+    SearchPage,
     NotificationPage,
     header,
+    SearchHeader,
     TabsPage
   ],
   imports: [
@@ -46,8 +50,10 @@ import { Ionic2RatingModule } from 'ionic2-rating';
     BusinessdetailPage,
     FeedbackPage,
     ContactPage,
+    SearchPage,
     NotificationPage,
     header,
+    SearchHeader,
     TabsPage
   ],
   providers: [
