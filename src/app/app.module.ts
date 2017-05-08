@@ -18,6 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { Ionic2RatingModule } from 'ionic2-rating';
+import { SettingsPage } from '../pages/settings/settings';
+import { TeamPage } from '../pages/team/team';
 
 //Below 2 components are related with localization implementation
 import { LocaleModule, LocalizationModule } from 'angular2localization';
@@ -37,7 +39,9 @@ import { LocalizeComponent } from '../components/localize/localize';
     header,
     SearchHeader,
     TabsPage,
-    LocalizeComponent 
+    LocalizeComponent ,
+    SettingsPage,
+    TeamPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,9 @@ import { LocalizeComponent } from '../components/localize/localize';
     NotificationPage,
     header,
     SearchHeader,
-    TabsPage
+    TabsPage,
+    SettingsPage,
+    TeamPage
   ],
   providers: [
     StatusBar,

@@ -73,7 +73,7 @@ export class HomePage extends Locale implements OnInit {
     console.log(selectedlanguage);
       if(selectedlanguage === 'hi'){
           this.selectLocale('hi', 'HI', 'EUR');
-      }else if(selectedlanguage === 'arabic'){
+      }else if(selectedlanguage === 'ar'){
           this.selectLocale('ar', 'AR', 'JPY');
       }else{
           this.selectLocale('en', 'US', 'USD');

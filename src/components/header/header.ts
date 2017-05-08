@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ContactPage } from '../../pages/contact/contact';
+import { TeamPage } from '../../pages/team/team';
 
 @Component({
   selector: 'header-section',
@@ -24,5 +25,8 @@ export class header {
     }
     contact($event){
     this.navCtrl.push(ContactPage);
+  }
+  team($event){
+    this.navCtrl.push(TeamPage);
     }
 }

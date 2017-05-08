@@ -3,5 +3,10 @@
   	"selectlang":"Select your language",
   	"selectcont":"Select your country",
     "getstarted":"GET STARTED"
+  },
+  "main":{
+  	"seg1":"Select your language",
+  	"seg2":"Select your country",
+    "seg3":"GET STARTED"
   }
 }
