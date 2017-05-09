@@ -6,6 +6,7 @@ import { MainPage } from '../pages/main/main';
 import { HomePage } from '../pages/home/home';
 import { BussinessListPage } from '../pages/bussiness_listing/bussiness_listing';
 import { BusinessdetailPage } from '../pages/business_detail/business_detail';
+import { SubcategoryPage } from '../pages/subcategories/subcategories';
 import { FeedbackPage } from '../pages/feedback/feedback';
 import { NotificationPage } from '../pages/notification/notification';
 import { ContactPage } from '../pages/contact/contact';
@@ -32,6 +33,7 @@ import { LocalizeComponent } from '../components/localize/localize';
     HomePage,
     BussinessListPage,
     BusinessdetailPage, 
+    SubcategoryPage,
     FeedbackPage,
     ContactPage,
     SearchPage,
@@ -59,6 +61,7 @@ import { LocalizeComponent } from '../components/localize/localize';
     HomePage,
     BussinessListPage,
     BusinessdetailPage,
+    SubcategoryPage,
     FeedbackPage,
     ContactPage,
     SearchPage,

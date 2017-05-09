@@ -1,0 +1,95 @@
+page-about{ background-color: #388ECB;}
+.headpsn{ position: relative !important;}
+.bgbanner{ position: relative;}
+.bgimgpsn{ width:100%;}
+.overlay{ padding: 0; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0,0,0,0.7);}
+.header-ios .bannav .searchbar-search-icon{ top:19px;}
+.bannav{
+  background: #112A3C;
+  ion-searchbar{background:none; padding: 0px;}
+  .searchbar-input{border-radius: 0; height: 45px;}
+  .searchbar-md .searchbar-search-icon{ top:15px;}
+ ion-col{ padding: 0px;}
+.menuicn img{
+    width: 20px;
+    margin: 14px 15px;
+    cursor: pointer;
+    float: right;
+    }
+ ion-col h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+ .navlctn-loc { 
+    float: left; 
+     height: 22px; 
+      margin: 10px 15px 0;
+  }
+}
+.icncolmain .col {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.icncolmain .col img {
+  height: 35px;
+}
+.icncolmain .col a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+.icncolmain .col a h3 {     
+   font-size: 12px;
+    text-transform: uppercase;
+    }
+.icncolmain .col a:hover { opacity: 0.7;}
+h3{
+  margin-top:5px;
+}
+.segment-md-primary .segment-button {
+  color: #fff;
+}
+.tabcat {  background: #112a3c; margin-top: -3px; position: relative; z-index: 99; }
+.tabcat.segment-ios .segment-button {
+  border: none !important;
+   border-radius: 0px !important;
+  color: #fff !important;
+}
+#menu-overlay{
+    position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  z-index: 100000;
+  width:100%;
+  background-color: #112a3d;
+  text-align: center;
+}
+.menumain {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.menumain ion-item {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.menumain ion-item .item-inner{ border-color: #fff !important;}
+.clsicn{float: right; margin-right: 20px; margin-top: 10px;}
+.clsicn img{max-width: 80%;}
+
+#menu-overlay .label {
+    margin: 20px 0px 20px 0;
+}

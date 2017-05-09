@@ -19,4 +19,9 @@ export class CategoryService {
   return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/event_cat')
       .map(res => res.json());
  }
+  load_sub_cat(tid) {
+  return  this.http.get('http://devlsa.paulson.co.in/?q=apiv1/sub_cat/'+tid)
+      .map(res => res.json());
+ }
 }
+ 
