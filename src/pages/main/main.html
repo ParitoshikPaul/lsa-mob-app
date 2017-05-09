@@ -1,4 +1,5 @@
-<header-search></header-search>
+<ion-content class="blubg">
+  <header-search></header-search>
 <ion-segment [(ngModel)]="tabcat" color="primary" class="tabcat">
       <ion-segment-button value="categories" translate>
         main.seg1
@@ -10,6 +11,7 @@
           main.seg3
       </ion-segment-button>
     </ion-segment>
+    
 <ion-grid padding class="icncolmain">
 <div [ngSwitch]="tabcat">
   <ion-row *ngSwitchCase="'categories'" ng-selected="selected"> 
@@ -39,3 +41,4 @@
  </ion-row>
 </div>
 </ion-grid>
+</ion-content>
