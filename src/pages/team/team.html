@@ -3,48 +3,17 @@
 <ion-grid padding class="teammain">
 <div>
   <ion-row> 
-   <ion-col col-6>
+
+
+   <ion-col col-6 *ngFor="let team of team_datas">
      <a href="">
-       <img src="assets/userimg.jpg">
-       <h3>Team Name</h3>
-       <p>Designation</p>
+       <img src="{{team.member_image}}">
+       <h3>{{team.title}}</h3>
+       <p>{{team.member_desingation}}</p>
      </a>
    </ion-col> 
-   <ion-col col-6>
-     <a href="">
-       <img src="assets/userimg.jpg">
-       <h3>Team Name</h3>
-       <p>Designation</p>
-     </a>
-   </ion-col> 
-   <ion-col col-6>
-     <a href="">
-       <img src="assets/userimg.jpg">
-       <h3>Team Name</h3>
-       <p>Designation</p>
-     </a>
-   </ion-col>  
-   <ion-col col-6>
-     <a href="">
-       <img src="assets/userimg.jpg">
-       <h3>Team Name</h3>
-       <p>Designation</p>
-     </a>
-   </ion-col> 
-   <ion-col col-6>
-     <a href="">
-       <img src="assets/userimg.jpg">
-       <h3>Team Name</h3>
-       <p>Designation</p>
-     </a>
-   </ion-col> 
-   <ion-col col-6>
-     <a href="">
-       <img src="assets/userimg.jpg">
-      <h3>Team Name</h3>
-       <p>Designation</p>
-     </a>
-   </ion-col> 
+
+
  </ion-row>
 
 </div>

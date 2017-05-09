@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { App, NavController, NavParams } from 'ionic-angular';
-//import { Notification } from '../../providers/notification';
+import { Team } from '../../providers/team';
 
 @Component({
   selector: 'team-member',
   templateUrl: 'team.html',
-  // providers: [Settings]
+ providers: [Team]
 })
 export class TeamPage {
       menu = false;
       tabdet = "";
-   public team_data: any;
+   public team_datas: any;
    
-  constructor(private _app: App, public navCtrl: NavController, public params: NavParams) {
-//this.notification.load().subscribe(data=> { this.notifications_data = data });
+  constructor(private _app: App, public navCtrl: NavController, public params: NavParams , public team:Team) {
+this.team.load().subscribe(data=> { this.team_datas = data });
   } 
      menu_overlay(event){ 
       this.menu = true;
@@ -27,3 +27,4 @@ export class TeamPage {
     this.navCtrl.pop();
   }
 }
+
