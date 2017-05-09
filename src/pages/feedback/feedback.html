@@ -1,5 +1,5 @@
-<header-section></header-section>
-<ion-content class="feedbacmain" padding>
+<ion-content class="blubg"><header-section></header-section>
+<ion-grid class="feedbacmain" padding>
     <form [formGroup]="feedback" (submit)="post_feedback($event)">      
       <label>Rate us</label>
       <rating [formControl]="feedback.controls['rating']" ng-model="rating.rate" (ngModelChange)="ratings($event)"></rating>
@@ -12,4 +12,5 @@
       <textarea name="feed" class="inputtxtfl" [formControl]="feedback.controls['message']"></textarea>
       <input type="submit" id="submit" value="Send Feedback" class="btn-lsa">
     </form>
+</ion-grid>
 </ion-content>
