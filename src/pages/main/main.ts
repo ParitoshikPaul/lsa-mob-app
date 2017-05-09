@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {CategoryService} from '../../providers/category-service';
 import { BussinessListPage } from '../bussiness_listing/bussiness_listing';
+import { SubcategoryPage } from '../subcategories/subcategories';
 import {FormBuilder} from '@angular/forms';
 @Component({
   selector: 'page-about',
@@ -40,7 +41,7 @@ export class MainPage {
   this.tabBarElement.style.display = 'inline-flex';
   }
   bussiness_list(event, tid){ 
-    this.navCtrl.push(BussinessListPage, { buss_tid: tid });
+    this.navCtrl.push(SubcategoryPage , { buss_tid: tid });
   }
   menu_overlay(event){ 
     this.menu = true;

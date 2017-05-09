@@ -20,15 +20,13 @@
      </a>
    </ion-col> 
  </ion-row>
- 
   <ion-row *ngSwitchCase="'new'">
    <ion-col col-4 *ngFor="let category_prod of categories_prod">
      <a (click)="bussiness_list(event, category_prod.tid);">
        <img src="{{category_prod.category_icon}}" class="caticn">
        <h3>{{category_prod.name}}</h3>
      </a>
-   </ion-col> 
-
+   </ion-col>
  </ion-row>
  <ion-row *ngSwitchCase="'offers'">
    <ion-col col-4 *ngFor="let category_event of categories_event">
