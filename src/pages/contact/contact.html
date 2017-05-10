@@ -3,23 +3,13 @@
   <div class="bgbanner">
    <img src="assets/bgimg1.jpg" class="bgimgpsn">
    </div>
-   <div class="bdetails contactpage" padding>
-          <h2>Contact Info</h2>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>      
-           <h4>Phone :  <b>+91 123 4567 89</b></h4>
-           <h4>Fax :  <b>0 123 4567 89</b></h4>
-           <h4>E-Mail:  <b>youremail@gmail.com</b></h4>            
-           <div class="icnwtxtblk">
-             <h2> Dubai Office</h2>
-             <h3>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h3>
-           </div>
-           <div class="icnwtxtblk">
-              <h2> India Office</h2>
-             <h3>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h3>
-           </div>
-           <div class="icnwtxtblk">
-              <h2>Abu Dhabi Office</h2>
-             <h3>Iris Watson P.O. Box 283 8562 Fusce Rd. Frederick Nebraska, 20620 (372) 587-2335,AE,</h3>
-           </div>
+   <div class="bdetails contactpage padding">
+        <!--<h2>{{content_data.title}}</h2>
+              <h2>{{content_data.body.und[0].value}}</h2>-->
+           <div class="icnwtxtblk" *ngFor="let contact of contacts">
+             <h2> {{contact.title}}</h2>
+             <h3>{{contact.address.thoroughfare}} {{contact.locality}} {{contact.city}} {{contact.state}} {{contact.country}} {{contact.postal}}</h3>
+           </div> 
+        
 </div>
 </ion-content>
