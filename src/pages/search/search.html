@@ -24,9 +24,14 @@
 </ion-header>
 <ion-content padding class="pagecntmain">
   <ion-grid class="listmain-grid">
-    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let item of businesslist;">
+    <ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list>
+    <ion-row class="listmain" (click)='business_detail(event, business.nid);' *ngFor="let item of items;">
       <ion-col col-4 class="nppimg">
-        <img src="{{item.image}}">
+       
       </ion-col>
       <ion-col col-8 class="paddcustom">
         <h2>{{item.title}}</h2>
@@ -41,7 +46,7 @@
           </ul>
           <span><img src="assets/icon/heart.png"> (5)</span>
         </div>
-        <p>{{item.description}}</p>
+       
       </ion-col>
     </ion-row>
    

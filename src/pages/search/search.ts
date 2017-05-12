@@ -11,30 +11,34 @@ import { BusinessdetailPage } from '../business_detail/business_detail';
 
 export class SearchPage {
   searchQuery: string = '';
-  items: string[];
+  items:Array<any> = [];
 
   public businesslist: any;
   public business_tid: any;
    menu = false;
    
   constructor(public navCtrl: NavController, public business: BusinessLists, public params: NavParams, public modal: ModalController, public platform: Platform) {
- this.initializeItems();
-    this.business.search_nodes().subscribe(data=> { this.businesslist = data });
+ //this.initializeItems();
+    this.business.search_nodes().subscribe(data => {this.businesslist = data
+      this.initializeItems(data);
+  });
+     //console.log(this.businesslist);
   }
-    initializeItems() {
-    this.items = this.businesslist;
+    initializeItems(d) {
+     
+     let items: any[];
+      d.forEach((element) => {
+        this.items.push(element.title)
+        
+     console.log(element.title);
+      });
   }
-  getItems(ev: any) {
-    // Reset items back to all of the items
-    this.initializeItems();
-
-    // set val to the value of the searchbar
+  
+ getItems(ev: any) {
     let val = ev.target.value;
-
-    // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       this.items = this.items.filter((item) => {
-        return (item.indexOf(val) > -1);
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
